@@ -3,7 +3,7 @@ import React from 'react';
 import './StyleScreen2.scss';
 
 
-export default class ViewScreen1 extends React.Component {
+export default class ViewScreen2 extends React.Component {
     render(){
         return(
             <div id="screenID2" className="sectionFull next-activeSlide">

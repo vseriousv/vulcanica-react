@@ -1,0 +1,156 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+body {
+  background-color: black;
+}
+.backgroudnFullPage{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.sectionFull{
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}
+.bgr-grey {background-color: grey;}
+
+/* АКТИВНЫЙ СЛАЙД */
+// .activeSlide { z-index: 2200; right: 0; -webkit-transition: 1s; -o-transition: 1s; transition: 1s;}
+// /* СЛЕДУЮЩИЙ СЛАЙД */
+// .next-activeSlide { z-index: 2100; right: -100vw; -webkit-transition: 1s; -o-transition: 1s; transition: 1s;}
+// /* ПРЕДЫДУЩИЙ СЛАЙД */
+// .pre-activeSlide { z-index: 2100; right: +100vw; -webkit-transition: 1s; -o-transition: 1s; transition: 1s;}
+
+#screenID1{
+  position: absolute;
+}
+#screenID1.activeSlide{
+  z-index: 2400;
+}
+#screenID8.activeSlide{
+  z-index: 2250;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.navigationField{
+  position: absolute;
+  width: 120px;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  z-index: 2300;
+}
+.navigationButton{
+  width: 120px;
+  height: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.inStartLayout, .inEndLayout, .prevNumber, .nextNumber, .NOW_Number{
+  font-family: 'Maven Pro', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+}
+.prevNumber .spanNumber, .nextNumber .spanNumber, .NOW_Number .spanNumber {
+  margin: 10px 3px;
+  width: 60px;
+  height: 21px;
+}
+.prevNumber .spanNumberMini, .nextNumber .spanNumberMini, .NOW_Number .spanNumberMini {
+  width: 28px;
+  height: 21px;
+}
+
+/* ********************
+** * *  MOBILE  * * *** 
+**********************/
+.navigationField_mob{
+  position: absolute;
+  width: 100vw;
+  height: 100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  z-index: 2300;
+  /* background-color: black; */
+  padding-bottom: 1.5rem;
+}
+@media (max-width: 568px) and (max-height: 567px){
+  .navigationField_mob{display: none !important;}
+  .navigationField_mob{padding-bottom: 0.5rem;}
+}
+.navigationButton_mob{
+  width: 100%;
+  max-width: 375px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.inStartLayout_mob, .inEndLayout_mob{
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  -webkit-transform:rotate(180deg);
+      -ms-transform:rotate(180deg);
+          transform:rotate(180deg);
+}
+.inStartLayout_mob, .inEndLayout_mob, .prevNumber_mob, .nextNumber_mob, .NOW_Number_mob{
+  font-family: 'Maven Pro', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 11px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.prevNumber, .nextNumber, .prevNumber_mob, .nextNumber_mob{color: #ADADAD;}
+@media (max-height: 600px){
+  .navigationButton_mob{
+      height: 70px;
+  }
+  .navigationField_mob{
+      height: 70px;
+  }
+
+}
