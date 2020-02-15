@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 // import ViewScreen1 from './components/screen1/ViewScreen1';
 // import ViewScreen2 from './components/screen2/ViewScreen2';
-// import ViewScreen3 from './components/screen3/ViewScreen3';
+import ViewScreen3 from './components/screen3/ViewScreen3';
 // import ViewScreen4 from './components/screen4/ViewScreen4';
 // import ViewScreen5 from './components/screen5/ViewScreen5';
 // import ViewScreen6 from './components/screen6/ViewScreen6';
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       {/* <ViewScreen1 /> */}
       {/* <ViewScreen2 /> */}
-      {/* <ViewScreen3 /> */}
+      <ViewScreen3 />
       {/* <ViewScreen4 /> */}
       {/* <ViewScreen5 /> */}
       {/* <ViewScreen6 /> */}
