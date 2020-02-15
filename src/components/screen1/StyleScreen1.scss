@@ -1,5 +1,352 @@
-.test{
-    height: 100px;
-    width: 100px;
-    background: navy;
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.font-mavenPro {
+    font-family: 'Maven Pro', sans-serif;
+}
+.color-white {
+    color: white;
+}
+.color-grey {
+    color: grey;
+}
+.p1_layout_1 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/img/background_page1.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto;
+    overflow: hidden;
+    position: relative;
+}
+.p1-h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 59px;
+}
+.p1-headerBlock{
+    margin-top: 190px;
+}
+.response_screen{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 25px;
+    z-index: 100;
+}
+.p1-description-items { margin-top: 70px; max-width: 190px;}
+.p1-description-items p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+#p1_animationEffectSfera {
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-name: p1_animateSlidein_animationEffectSfera;
+            animation-name: p1_animateSlidein_animationEffectSfera;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+@-webkit-keyframes p1_animateSlidein_animationEffectSfera {
+    from { margin-left: -65px; }
+    to {  margin-left: -40px; }
+}
+@keyframes p1_animateSlidein_animationEffectSfera {
+    from { margin-left: -65px; }
+    to {  margin-left: -40px; }
+}
+#p1_SVGstr{
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-name: p1_animateSlidein_SVGstr;
+            animation-name: p1_animateSlidein_SVGstr;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+@-webkit-keyframes p1_animateSlidein_SVGstr {
+    from { margin-left: 40px; }
+    to {  margin-left: 20px; }
+}
+@keyframes p1_animateSlidein_SVGstr {
+    from { margin-left: 40px; }
+    to {  margin-left: 20px; }
+}
+.p1-mobileScrollEffectBlock{
+    position: relative;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+.p1-bottle-position{
+    width: 145px;
+    height: 500px;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+}
+.p1-bottleIMG{
+    background-image: url(/img/p1-buttle.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+.p1-curvesAndBottle{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+}
+.p1-water-position{
+    position: absolute;
+    bottom: 0;
+    width: calc(100% + 100px);
+    height: 490px;
+    right:-100px;
+}
+.p1-waterIMG{
+    background-image: url(/img/p1-water.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;  
+}
+@media (max-width: 374px) {
+    .p1-headerBlock{
+        margin-top: 100px;
+    }
+    .p1-h1{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .p1-description-items { margin-top: 70px; max-width: 190px;}
+    .p1-description-items p{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .p1-bottle-position{
+        width: 100px;
+        height: 400px;
+        bottom: 50px;
+    }
+    .p1-water-position{
+        bottom: -25px;
+        width: calc(100% + 120px);
+        height: 490px;
+        right:-120px;
+    }
+    .p1-mobileScrollEffectBlock{
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+}
+@media (max-width: 578px) and (max-height: 780px){
+    .p1-headerBlock{
+        margin-top: 100px;
+    }
+}
+@media (max-width: 578px) and (max-height: 680px){
+    .p1-headerBlock{
+        margin-top: 50px;
+    }
+}
+@media (min-width: 578px){
+    .p1-bottle-position{
+        width: 145px;
+        height: 500px;
+        position: absolute;
+        bottom: 100px;
+        right: 100px;
+    }
+    .p1-curvesAndBottle{
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 50;
+    }
+    .p1-water-position{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 490px;
+        right: 0;
+    }
+}
+@media (min-width: 768px){
+    .response_screen{
+        padding: 0 90px;
+    }
+    .p1-headerBlock{
+        margin-top: 324px;
+    }
+    .p1-h1{
+        font-size: 70px;
+        line-height: 82px;
+    }
+    .p1-description-items { margin-top: 70px; max-width: 350px;}
+    .p1-description-items p{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .p1-bottle-position{
+        width: 236px;
+        height: 775px;
+        bottom: 50px;
+        right: 20px;
+    }
+    .p1-water-position{
+        bottom: 0;
+        width: calc(100% + 120px);
+        height: 640px;
+        right: 0;
+    }
+    .p1-mobileScrollEffectBlock{
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+    .p1-mobileScrollEffectBlock{
+        margin-left: 100px;
+        margin-top: 130px;
+    }
+}
+@media (min-width: 992px) and (orientation: landscape) {
+    .p1_layout_1 {
+        background-position: center center;
+        /* background-size: auto; */
+    }
+    .response_screen{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .p1-headerBlock h1{
+        font-size: 100px;
+        line-height: 117px;
+    }
+    .p1-description-items {
+        max-width: 500px;
+    }
+    .p1-description-items p{
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .p1-desktopScrollEffectBlock{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 40px;
+    }
+    .p1-desktopScrollEffectBlockScrollEffect {
+        -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+        -webkit-animation-name: p1_desktopAnimateSlidein_animationEffectSfera;
+                animation-name: p1_desktopAnimateSlidein_animationEffectSfera;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+                animation-direction: alternate;
+    }
+    @-webkit-keyframes p1_desktopAnimateSlidein_animationEffectSfera {
+        from { margin-top: 0; }
+        to {  margin-top: 5px; }
+    }
+    @keyframes p1_desktopAnimateSlidein_animationEffectSfera {
+        from { margin-top: 0; }
+        to {  margin-top: 5px; }
+    }
+    .p1-positionDesktopScrollEffect {
+        margin-left: 200px;
+        margin-top: 50px;
+    }
+    .p1-water-position{
+        height: 100%;
+        top: 80px;
+    }
+}
+
+@media(min-width: 1200px) and (max-width: 1400px) and (max-height: 1000px){
+    .p1-headerBlock{
+        margin-top: 200px;
+    }
+    .p1-headerBlock h1{     
+        font-size: 72px;
+        line-height: 90px;
+    }
+    .p1-description-items p{
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+@media(min-width: 1200px) and (max-width: 1400px) and (max-height: 800px){
+    .p1-headerBlock{
+        margin-top: 100px;
+    }
+    .p1-bottle-position{
+        width: 185px;
+        height: 600px;
+        right: 500px;
+        bottom: 20px;
+    }
+    .p1-water-position{
+        top: 0;
+        height: calc(100% + 80px);
+    }
+}
+@media(min-width: 1200px) and (max-width: 1400px) and (max-height: 650px){
+    .p1-bottle-position{
+        width: 185px;
+        height: 500px;
+        right: 500px;
+        bottom: 20px;
+    }
+}
+@media(min-width: 1500px) and (orientation: landscape) {
+    .p1-water-position{
+        right: -50px;
+    }
+    .p1-bottle-position{
+        right: 500px;
+        width: 265px;
+        height: 865px;
+    }  
+}
+@media(min-width: 1700px) and (orientation: landscape) {
+    .p1-water-position{
+        right: 0px;
+    }
+    .p1-bottle-position{
+        right: 670px;
+        bottom: 50px;
+    }  
 }
