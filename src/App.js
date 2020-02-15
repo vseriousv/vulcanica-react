@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ViewScreen1 from './components/screen1/ViewScreen1';
 
