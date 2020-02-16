@@ -73,3 +73,51 @@ export default class ViewScreen7 extends React.Component {
         );
     }
 }
+
+// constructor() {
+//     super();
+//     this.state = {
+//         scrolling : false,
+//         isScroll : true,
+//         SCREEN : 1,
+//         LAYOUT2 : 1,
+//         sectionFullMaxSlide : 8,
+//     };
+//     this.handleScroll = this.handleScroll.bind(this)
+//   }
+// componentDidMount() {
+//     window.addEventListener('wheel', this.handleScroll);
+// }
+
+// componentWillUnmount() {
+//     window.removeEventListener('wheel', this.handleScroll);
+// }
+
+// handleScroll(event) {
+
+//         if (this.state.isScroll == true) {
+//             this.setState({
+//                 scrolling : true,
+//                 isScroll : false,
+//             })
+//             setTimeout(() => {this.setState({isScroll : true, scrolling : false })}, 1500);
+//             const activeSlideID = document.getElementsByClassName('.activeSlide').getAttribute('id').slice(-1)
+//             // console.log("activeSlideID", activeSlideID);
+//             if(activeSlideID == this.sectionFullMaxSlide) { 
+//                 console.log("END"); 
+//             } else {
+//                 const next_activeSlideID = +activeSlideID + 1;
+//                 this.setState({SCREEN : next_activeSlideID})
+//                 // changeNumberNavigateMenu(SCREEN);
+//                 const res1 = '#screenID'+activeSlideID;
+//                 const res2 = '#screenID'+next_activeSlideID;
+
+//                 document.getElementById(res1).classList.remove("activeSlide")
+//                 document.getElementById(res1).classList.add("activeSlide")
+//                 document.getElementById(res2).classList.add("activeSlide")
+//                 document.getElementById(res2).classList.remove("activeSlide")
+
+//                 // paralax_layout2();
+//             }
+//         }else{ console.log(this.state.isScroll)}
+// }
