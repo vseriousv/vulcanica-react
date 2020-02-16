@@ -1,12 +1,63 @@
 import React from 'react';
-// import ControllerScreen1 from './ControllerScreen1';
+import ControllerScreen2 from './ControllerScreen2';
 import './StyleScreen2.scss';
-
+const controller = new ControllerScreen2;
 
 export default class ViewScreen2 extends React.Component {
+
+    state = {slide: 1}
+    componentDidMount(event){
+        const screenID2 = document.getElementById("screenID2");
+        screenID2.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+
+    componentWillUnmount(event){
+        const screenID2 = document.getElementById("screenID2");
+        screenID2.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+
+    controllerDoing(event){
+        if (this.state.slide != 3){
+            this.showNextSlide(this.state.slide);
+            this.setState({slide: +this.state.slide+1})
+        }else{
+            this.setState({slide: 1})
+            setTimeout(()=>{this.showDefaultSlide()}, 1000)
+            this.props.nextScreen();
+        }
+    }
+
+    showNextSlide(value){
+        for (let i = value; i <= 3; i++){
+            if(i <= value){
+                document.getElementById("layoutID"+i).classList.add("pre-activeLayout2"); 
+                document.getElementById("layoutID"+i).classList.remove("activeLayout2");
+
+                document.getElementById("itemtextID"+i).classList.add("textLayoutID_nonActive"); 
+                document.getElementById("itemtextID"+i).classList.remove("textLayoutID_Active");
+            } else {
+                document.getElementById("layoutID"+i).classList.add("activeLayout2"); 
+                document.getElementById("layoutID"+i).classList.remove("pre-activeLayout2");
+
+                console.log("456781y1312 ".document.getElementById("itemtextID1"))
+                // document.getElementById("itemtextID"+i).classList.add("textLayoutID_Active"); 
+                // document.getElementById("itemtextID"+i).classList.remove("textLayoutID_nonActive");
+            }
+        }
+    }
+    showDefaultSlide(){
+        for (let i = 1; i <= 3; i++){
+                document.getElementById("layoutID"+i).classList.add("activeLayout2"); 
+                document.getElementById("layoutID"+i).classList.remove("pre-activeLayout2");
+        }
+    }
     render(){
         return(
-            <div id="screenID2" className="sectionFull next-activeSlide">
+        <div id="screenID2" className="sectionFull activeScreen">
             <div className="layouts d-none d-xl-flex">
                 <div id="sectorHoverID3" className="sectorHover">
                     <div className="hrLine">
@@ -56,11 +107,10 @@ export default class ViewScreen2 extends React.Component {
                 <div id="desktop_layoutID3" className="desktop-layout_2 desktop-layout_2-3"></div>
             </div>
 
-
             <div className="layouts d-xl-none d-flex">
                 <div id="layoutID1" className="layoutID activeLayout2"><div id="layout_21" className="layout_2-1 layout_2-1_paralax"></div></div>
-                <div id="layoutID2" className="layoutID next-activeLayout2"><div id="layout_22" className="layout_2-2 layout_2-1_paralax"></div></div>
-                <div id="layoutID3" className="layoutID next-activeLayout2"><div id="layout_23" className="layout_2-3 layout_2-1_paralax"></div></div>
+                <div id="layoutID2" className="layoutID activeLayout2"><div id="layout_22" className="layout_2-2 layout_2-1_paralax"></div></div>
+                <div id="layoutID3" className="layoutID activeLayout2"><div id="layout_23" className="layout_2-3 layout_2-1_paralax"></div></div>
             </div>
 
 
@@ -80,9 +130,6 @@ export default class ViewScreen2 extends React.Component {
                 </div>
                     {/* <!-- navigation for two screen --> */}
                 <div className="bottomTabletBlock">
-                    <div className="navigationTwoScreen">
-                        <div id="buttonNext" className="buttonNext buttonNextNotActive"></div>
-                    </div>
                     <div className="textUnderBTNTablet d-xl-none">
                         <div id="itemtextID1" className="textLayoutID_nonActive textLayoutID_Active"><p className="itemTextUnderBTNTablet text-uppercase">350 млн. лет назад</p></div>
                         <div id="itemtextID2" className="textLayoutID_nonActive"><p className="itemTextUnderBTNTablet text-uppercase">320 млн. лет назад</p></div>

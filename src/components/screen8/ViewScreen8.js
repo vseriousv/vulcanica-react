@@ -2,11 +2,28 @@ import React from 'react';
 import ControllerScreen8 from './ControllerScreen8';
 import './StyleScreen8.scss';
 
+const controller = new ControllerScreen8;
 
 export default class ViewScreen8 extends React.Component {
+    componentDidMount(event){
+        const screenID8 = document.getElementById("screenID8");
+        screenID8.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+
+    componentWillUnmount(event){
+        const screenID8 = document.getElementById("screenID8");
+        screenID8.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+    controllerDoing(event){
+        this.props.nextScreen();
+    }
     render(){
         return(
-            <div id="screenID8" className="sectionFull next-activeSlide">
+            <div id="screenID8" className="sectionFull activeScreen">
                 <div className="content_box">
                     <div className="gradient_p8"></div>
                     <div className="box_table">

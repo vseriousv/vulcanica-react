@@ -1,15 +1,10 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
-body {
-    background-color: #0F0F0F;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
 .background_p3{
     height: 100vh;
     width: 100vw;
-    background: url(/img/background-p3.png);
+    background-image: url(/img/background-p3.png);
+    background-color: black;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
@@ -19,6 +14,7 @@ body {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     background-size: cover;
+    position: relative;
 }
 .box-container_p3 {
     width: 100%;

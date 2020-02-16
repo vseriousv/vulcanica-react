@@ -1,12 +1,28 @@
 import React from 'react';
 import ControllerScreen5 from './ControllerScreen5';
 import './StyleScreen5.scss';
-
+const controller = new ControllerScreen5;
 
 export default class ViewScreen5 extends React.Component {
+    componentDidMount(event){
+        const screenID5 = document.getElementById("screenID5");
+        screenID5.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+
+    componentWillUnmount(event){
+        const screenID5 = document.getElementById("screenID5");
+        screenID5.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+    controllerDoing(event){
+        this.props.nextScreen();
+    }
     render(){
         return(
-            <div id="screenID5" className="sectionFull next-activeSlide">
+            <div id="screenID5" className="sectionFull activeScreen">
             <div className="background-p5">
                 <div className="gradient h-100 w-100">
                     <div className="box-container_p5 d-none d-lg-flex">

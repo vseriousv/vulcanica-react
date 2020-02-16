@@ -1,12 +1,28 @@
 import React from 'react';
-// import ControllerScreen1 from './ControllerScreen1';
+import ControllerScreen1 from './ControllerScreen1';
 import './StyleScreen1.scss';
-
+const controller = new ControllerScreen1;
 
 export default class ViewScreen1 extends React.Component {
+    componentDidMount(event){
+        const screenID1 = document.getElementById("screenID1");
+        screenID1.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+
+    componentWillUnmount(event){
+        const screenID1 = document.getElementById("screenID1");
+        screenID1.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+    controllerDoing(event){
+        this.props.nextScreen();
+    }
     render(){
         return(
-            <div id="screenID1" className="sectionFull activeSlide">
+            <div id="screenID1" className="sectionFull activeScreen">
             <div className="p1_layout_1">
                 <div className="response_screen">
                     <div className="p1-headerBlock">

@@ -1,11 +1,28 @@
 import React from 'react';
+import ControllerScreen3 from './ControllerScreen3';
 import './StyleScreen3.scss';
-
+const controller = new ControllerScreen3;
 
 export default class ViewScreen3 extends React.Component {
+    componentDidMount(event){
+        const screenID3 = document.getElementById("screenID3");
+        screenID3.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+
+    componentWillUnmount(event){
+        const screenID3 = document.getElementById("screenID3");
+        screenID3.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+    controllerDoing(event){
+        this.props.nextScreen();
+    }
     render(){
         return(
-            <div id="screenID3" className="sectionFull next-activeSlide">
+            <div id="screenID3" className="sectionFull activeScreen">
             <div className="background_p3">
                 <div className="box-container_p3 d-none d-lg-flex">
                     <h1 className="title-left-block_p3 h1">

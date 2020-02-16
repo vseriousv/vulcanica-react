@@ -4,9 +4,25 @@ import './StyleScreen7.scss';
 
 
 export default class ViewScreen7 extends React.Component {
+    componentDidMount(event){
+        const screenID7 = document.getElementById("screenID7");
+        screenID7.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+
+    componentWillUnmount(event){
+        const screenID7 = document.getElementById("screenID7");
+        screenID7.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+    controllerDoing(event){
+        this.props.nextScreen();
+    }
     render(){
         return(
-            <div id="screenID7" className="sectionFull next-activeSlide">
+            <div id="screenID7" className="sectionFull activeScreen">
             <div className="background-p7">
                 <div className="gradient_p7 h-100 w-100">
                     <div className="box-container_p7">

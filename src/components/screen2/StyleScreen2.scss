@@ -41,12 +41,23 @@ body {
 }
 
 /* АКТИВНЫЙ СЛАЙД */
-.activeLayout2 { z-index: 1000; right: 0; -webkit-transition: 1s; -o-transition: 1s; transition: 1s;}
-/* СЛЕДУЮЩИЙ СЛАЙД */
-.next-activeLayout2 { right: -100vw; -webkit-transition: 1s; -o-transition: 1s; transition: 1s;}
-/* ПРЕДЫДУЩИЙ СЛАЙД */
-.pre-activeLayout2 { right: +100vw; -webkit-transition: 1s; -o-transition: 1s; transition: 1s;}
+// .activeLayout2 { z-index: 1000; right: 0; -webkit-transition: 1s; -o-transition: 1s; transition: 1s;}
+// /* СЛЕДУЮЩИЙ СЛАЙД */
+// .next-activeLayout2 { right: -100vw; -webkit-transition: 1s; -o-transition: 1s; transition: 1s;}
+// /* ПРЕДЫДУЩИЙ СЛАЙД */
+// .pre-activeLayout2 { right: +100vw; -webkit-transition: 1s; -o-transition: 1s; transition: 1s;}
 
+// Активный слайд
+// .activeLayout2 { right: 0; -webkit-transition: .2s; -o-transition: .2s; transition: 0.2s;}
+.activeLayout2 { right: 0;}
+
+// Неактивный слайд
+// .pre-activeLayout2 { right: +100vw; -webkit-transition: .2s; -o-transition: .2s; transition: 0.2s;}
+.pre-activeLayout2 { right: +100vw;}
+
+#layoutID1{z-index: 1000;}
+#layoutID2{z-index: 999;}
+#layoutID3{z-index: 998;}
 .layout_2-1 {
     display: -webkit-box;
     display: -ms-flexbox;

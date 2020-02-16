@@ -1,12 +1,28 @@
 import React from 'react';
 import ControllerScreen4 from './ControllerScreen4';
 import './StyleScreen4.scss';
-
+const controller = new ControllerScreen4;
 
 export default class ViewScreen4 extends React.Component {
+    componentDidMount(event){
+        const screenID4 = document.getElementById("screenID4");
+        screenID4.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+
+    componentWillUnmount(event){
+        const screenID4 = document.getElementById("screenID4");
+        screenID4.addEventListener('touchend', (event) => {
+            this.controllerDoing(event)
+        });
+    }
+    controllerDoing(event){
+        this.props.nextScreen();
+    }
     render(){
         return(
-            <div id="screenID4" className="sectionFull next-activeSlide">
+            <div id="screenID4" className="sectionFull activeScreen">
                 <div className="background-p4">
                     <div className="container-fluid box-container d-none d-lg-flex">
                         <div className="gradient_p4"></div>
